@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<ul>
+    @foreach (var f in Model)
+    {
+       
+        string name = Path.GetFileName(f);
+        string[] nameArray = name.Split('.');
+
+        <li>@Html.ActionLink(name, "MyContent", "MyFiles", new { id= nameArray[0] }, null)</li>
+
+    }
+</ul>

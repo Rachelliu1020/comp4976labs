@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "MyContent";
+}
+
+<h2>MyContent</h2>
+@foreach (var f in Model)
+{
+    string content = File.ReadAllText(f);
+    <h2>@content</h2>
+}
+
